@@ -1,0 +1,27 @@
+@keyframes art-hover {
+    from {box-shadow: none;}
+    to {box-shadow: 5px 5px 30px #2f3542;}
+}
+
+.article-container {
+    border: 1px solid #2f3542;
+    border-radius: 2px;
+    width: 100%;
+    text-align: center;
+    margin: 10px
+}
+
+.article-title {
+    text-transform: uppercase;
+}
+
+.article-container:hover {
+    animation-name: art-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.article-image {
+    width: 200px;
+    margin-bottom: 30px;
+}

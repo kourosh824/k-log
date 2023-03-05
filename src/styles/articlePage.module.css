@@ -1,0 +1,24 @@
+:root {
+    --f-color: #2f3542;
+    --back-color: #ced6e0;
+}
+
+.article-page-container {
+    height: 100vh;
+    display: flex;
+    background-color: var(--back-color);
+    color: var(--f-color);
+    font-family: 'Montserrat', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.article-page-title {
+    text-transform: uppercase;
+}
+
+.article-page-body {
+    text-align: justify;
+}
