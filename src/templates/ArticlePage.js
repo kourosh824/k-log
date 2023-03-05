@@ -9,14 +9,14 @@ import PageHead from "../components/PageHead";
 const ArticlePage = (props) => {
     const pic = getImage(props.pageContext.image);
     return (
-        <div class={artPageStyles.articlePageContainer}>
+        <div className={artPageStyles.articlePageContainer}>
             <PageHead pageTitle={ props.pageContext.title } />
-            <h1 class={artPageStyles.articlePageTitle}>{props.pageContext.title}</h1>
-            <GatsbyImage image={pic} class={artPageStyles.articlePageImage} />
-            <p class={artPageStyles.articlePageBody}>
+            <h1 className={artPageStyles.articlePageTitle}>{props.pageContext.title}</h1>
+            <GatsbyImage image={pic} className={artPageStyles.articlePageImage} />
+            <p className={artPageStyles.articlePageBody}>
                 {documentToReactComponents(JSON.parse(props.pageContext.body.raw))}
             </p>
-            <Link to="../../" class={artPageStyles.articlePageBack}>
+            <Link to="../../" className={artPageStyles.articlePageBack}>
                 Back
             </Link>
         </div>

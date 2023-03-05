@@ -5,7 +5,7 @@ import * as styles from '../styles/main.module.css';
 
 const IndexPage = () => {
     return (
-        <div class={styles.mainContainer}>
+        <div className={styles.mainContainer}>
             <Header />
             <Body />
         </div>

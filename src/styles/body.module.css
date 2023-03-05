@@ -1,6 +1,18 @@
-.body {
+.row {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
+    height: 40vh;
+}
+
+.row-background {
+    position: absolute;
+    bottom: 15%;
+    height: 65%;
+    z-index: -1;
+}
+
+.body {
+    margin-top: 100px;
 }

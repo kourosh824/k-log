@@ -9,9 +9,9 @@ const Article = ( {title, image, body} ) => {
     return (
         <Link
         to={`/articles/${url}`}
-        class={artStyles.articleContainer} >
-            <h2 class={artStyles.articleTitle}>{title}</h2>
-            <GatsbyImage image={pic} class={artStyles.articleImage} />
+        className={artStyles.articleContainer} >
+            <h2 className={artStyles.articleTitle}>{title}</h2>
+            <GatsbyImage image={pic} className={artStyles.articleImage} />
         </Link>
     );
 }
