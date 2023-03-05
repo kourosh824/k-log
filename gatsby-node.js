@@ -11,13 +11,17 @@ exports.createPages = ({ graphql, actions }) => {
                 nodes {
                     title
                     image {
-                        gatsbyImageData(width: 200)
+                        gatsbyImageData(width: 500)
                     }
                     body {
                         raw
                     }
+                    publicationDate
+                    author {
+                        fullName
+                    }
                 }
-            }
+              }
         }
     `)
     .then( result => {

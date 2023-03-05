@@ -6,7 +6,9 @@ import * as styles from '../styles/main.module.css';
 const IndexPage = () => {
     return (
         <div className={styles.mainContainer}>
-            <Header />
+            <Header 
+            title="K-LOG: a blog powered by Gatsby 🚀"
+            />
             <Body />
         </div>
     );

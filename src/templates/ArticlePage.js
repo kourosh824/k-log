@@ -5,20 +5,33 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import PageHead from "../components/PageHead";
+import Header from '../components/Header';
 
 const ArticlePage = (props) => {
     const pic = getImage(props.pageContext.image);
+    console.log(props);
     return (
         <div className={artPageStyles.articlePageContainer}>
             <PageHead pageTitle={ props.pageContext.title } />
-            <h1 className={artPageStyles.articlePageTitle}>{props.pageContext.title}</h1>
-            <GatsbyImage image={pic} className={artPageStyles.articlePageImage} />
-            <p className={artPageStyles.articlePageBody}>
+            <Header
+            title={props.pageContext.title}
+            isArticle />
+            <GatsbyImage 
+            image={pic}
+            className={artPageStyles.articlePageImage} />
+            <div
+            className={artPageStyles.articlePageMeta}>
+                <p>
+                    {props.pageContext.publicationDate.substring(0, 10).replace(/-/g, '/')}
+                </p>
+                <p>
+                {props.pageContext.author.fullName.toUpperCase()}
+                </p>
+            </div>
+            <p
+            className={artPageStyles.articlePageBody}>
                 {documentToReactComponents(JSON.parse(props.pageContext.body.raw))}
             </p>
-            <Link to="../../" className={artPageStyles.articlePageBack}>
-                Back
-            </Link>
         </div>
     );
 } 

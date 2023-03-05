@@ -7,6 +7,11 @@
     to {box-shadow: 5px 5px 30px #2f3542;}
 }
 
+@keyframes back-rotate {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+
 .header {
     z-index: 1;
     position: fixed;
@@ -16,10 +21,36 @@
     width: 100%;
     text-align: center;
     background-color: var(--back-color);
+    box-shadow: 5px 5px 30px #2f3542;
 }
 
-.header:hover {
-    animation-name: header-hover;
-    animation-duration: 2s;
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-back {
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.header-title {
+    margin-right: auto;
+    flex-grow: 1;
+}
+
+.header-back:link,
+.header-back:visited,
+.header-back:hover,
+.header-back:active {
+    color: black;
+    text-decoration: none;
+}
+
+.header-back:hover {
+    animation: back-rotate;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
