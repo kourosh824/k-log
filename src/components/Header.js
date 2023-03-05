@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div class={headerStyles.header}>
             <h1>
-                k-log: a static blog generator
+                K-LOG: a blog powered by Gatsby 🚀
             </h1>
         </div>
     );
