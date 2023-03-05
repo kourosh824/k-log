@@ -12,9 +12,13 @@ const Header = (props) => {
                 className={headerStyles.headerBack}>
                     <h1>⟵</h1>
                 </Link>}
-                <h1 className={headerStyles.headerTitle}>
-                    {props.title}
+                <h1 className={!props.isRocket && headerStyles.headerTitle}>
+                    {props.title}&nbsp;
                 </h1>
+                {props.isRocket && 
+                <h1 className={headerStyles.headerRocket}>
+                    🚀
+                </h1>}
             </div>
         </div>
     );

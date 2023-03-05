@@ -7,8 +7,8 @@ const IndexPage = () => {
     return (
         <div className={styles.mainContainer}>
             <Header 
-            title="K-LOG: a blog powered by Gatsby 🚀"
-            />
+            title="K-LOG: a blog powered by Gatsby "
+            isRocket />
             <Body />
         </div>
     );

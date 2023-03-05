@@ -12,6 +12,14 @@
     to {rotate: 360deg;}
 }
 
+@keyframes rocket-shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
 .header {
     z-index: 1;
     position: fixed;
@@ -39,6 +47,10 @@
 .header-title {
     margin-right: auto;
     flex-grow: 1;
+}
+
+.header-rocket {
+    animation: rocket-shake 0.5s infinite;
 }
 
 .header-back:link,
