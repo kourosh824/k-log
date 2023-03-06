@@ -16,7 +16,6 @@ const Body = () => {
             );
         }
     );
-    console.log(art);
 
     const max = 3;
     const artRows = [];

@@ -9,7 +9,7 @@ import Header from '../components/Header';
 
 const ArticlePage = (props) => {
     const pic = getImage(props.pageContext.image);
-    console.log(props);
+    
     return (
         <div className={artPageStyles.articlePageContainer}>
             <PageHead pageTitle={ props.pageContext.title } />

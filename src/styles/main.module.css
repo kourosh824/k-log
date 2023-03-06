@@ -5,6 +5,11 @@
     --back-color: #ced6e0;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .main-container {
     font-family: 'Montserrat', sans-serif;
     color: var(f-color);
@@ -12,4 +17,5 @@
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    min-height: 100vh;
 }
