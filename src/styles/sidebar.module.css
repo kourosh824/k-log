@@ -1,0 +1,52 @@
+@keyframes back-rotate {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+
+.sidebar-container {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: var(--side-color);
+    color: var(--f-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidebar-option {
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.sidebar-option:hover {
+    color: gray;
+}
+
+.sidebar-close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 25px;
+    font-size: 58px;
+    margin-right: 50px;
+}
+
+.sidebar-close:hover {
+    animation-name: back-rotate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar-option {font-size: 18px;}
+}

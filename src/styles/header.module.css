@@ -41,6 +41,15 @@
     margin-left: 10px;
     margin-right: auto;
     color: var(--f-color);
+    text-decoration: none;
+}
+
+.header-sidebar {
+    margin-right: 10px;
+    margin-left: auto;
+    color: var(--f-color);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .header-title {
@@ -52,15 +61,8 @@
     animation: rocket-shake 0.5s infinite;
 }
 
-.header-back:link,
-.header-back:visited,
 .header-back:hover,
-.header-back:active {
-    color: var(--f-color);
-    text-decoration: none;
-}
-
-.header-back:hover {
+.header-sidebar:hover {
     animation: back-rotate;
     animation-duration: 1s;
     animation-fill-mode: forwards;

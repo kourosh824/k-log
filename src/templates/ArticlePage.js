@@ -15,26 +15,32 @@ const ArticlePage = (props) => {
             <Header
             title={props.pageContext.title}
             isArticle />
-            <GatsbyImage 
-            image={pic}
-            className={artPageStyles.articlePageImage} />
             <div
-            className={artPageStyles.articlePageMeta}>
-                <p>
-                    {props.pageContext.publicationDate.substring(0, 10).replace(/-/g, '/')}
-                </p>
-                <p>
-                {props.pageContext.author.fullName.toUpperCase()}
-                </p>
-            </div>
-            <p
             className={artPageStyles.articlePageBody}>
-                {documentToReactComponents(
-                    JSON.parse(
-                        props.pageContext.body.raw
-                        )
-                    )}
-            </p>
+                <GatsbyImage 
+                image={pic}
+                className={artPageStyles.articlePageImage} />
+                <div
+                className={artPageStyles.articlePageContent}>
+                    <div
+                    className={artPageStyles.articlePageMeta}>
+                        <p>
+                            {props.pageContext.publicationDate.substring(0, 10).replace(/-/g, '/')}
+                        </p>
+                        <p>
+                        {props.pageContext.author.fullName.toUpperCase()}
+                        </p>
+                    </div>
+                    <p
+                    className={artPageStyles.articlePageText}>
+                        {documentToReactComponents(
+                            JSON.parse(
+                                props.pageContext.body.raw
+                                )
+                            )}
+                    </p>
+                </div>
+            </div>
         </div>
     );
 } 

@@ -2,7 +2,24 @@
 
 :root {
     --primary-color: #01579B;
+    --side-color: #283593;
     --f-color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 body {
@@ -17,4 +34,5 @@ body {
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
+    transition: margin-right .5s;
 }

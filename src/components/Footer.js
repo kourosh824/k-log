@@ -1,19 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
 import * as footerStyles from '../styles/footer.module.css';
-import { Link } from 'gatsby';
 
 const Footer = (props) => {
     const words = [
-        'Maybe try clicking me?',
+        'Maybe try clicking me? 🤫',
         'Made with ❤️ by kourosh824',
-        'As of now it is 12:32pm...',
-        'I kinda enjoy doing this :)',
-        'I asked yiannisha for help lmao',
-        'Maybe I should study more though 0-0',
-        'All right why the heck are you still here?',
-        'You wanna leave or something?',
-        'Bro do something with your life lmao'
+        'As of now it is 12:32pm 🖖',
+        'I kinda enjoy doing this 🤗',
+        'I asked yiannisha for help 🔥',
+        'Maybe I should study more though 💩',
+        'All right why the heck are you still here? 🧐',
+        'You wanna leave or something? 💀',
+        'Bro do something with your life 😗'
     ];
     const [text, setText] = useState([0, words[0]]);
     return (
