@@ -22,7 +22,8 @@
     top: 0;
     width: 100%;
     text-align: center;
-    background-color: var(--back-color);
+    background-color: var(--primary-color);
+    color: var(--f-color);
     box-shadow: 5px 5px 30px #2f3542;
     font-size: 3vw;
     font-weight: bold;
@@ -39,6 +40,7 @@
 .header-back {
     margin-left: 10px;
     margin-right: auto;
+    color: var(--f-color);
 }
 
 .header-title {
@@ -54,7 +56,7 @@
 .header-back:visited,
 .header-back:hover,
 .header-back:active {
-    color: black;
+    color: var(--f-color);
     text-decoration: none;
 }
 

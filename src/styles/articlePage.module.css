@@ -4,6 +4,7 @@
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
     align-items: center;
+    color: var(--primary-color);
 }
 
 .article-page-image {

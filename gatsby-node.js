@@ -11,7 +11,7 @@ exports.createPages = ({ graphql, actions }) => {
                 nodes {
                     title
                     image {
-                        gatsbyImageData(width: 500)
+                        gatsbyImageData(width: 900)
                     }
                     body {
                         raw

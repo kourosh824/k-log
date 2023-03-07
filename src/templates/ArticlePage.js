@@ -3,7 +3,6 @@ import React from "react";
 import * as artPageStyles from '../styles/articlePage.module.css';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
 import PageHead from "../components/PageHead";
 import Header from '../components/Header';
 
@@ -30,7 +29,11 @@ const ArticlePage = (props) => {
             </div>
             <p
             className={artPageStyles.articlePageBody}>
-                {documentToReactComponents(JSON.parse(props.pageContext.body.raw))}
+                {documentToReactComponents(
+                    JSON.parse(
+                        props.pageContext.body.raw
+                        )
+                    )}
             </p>
         </div>
     );
