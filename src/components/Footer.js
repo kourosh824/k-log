@@ -1,13 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import * as footerStyles from '../styles/footer.module.css';
+import { Link } from 'gatsby';
 
 const Footer = (props) => {
     const words = [
-        'Maybe put your cursor over here?',
+        'Maybe try clicking me?',
         'Made with ❤️ by kourosh824',
         'As of now it is 12:32pm...',
         'I kinda enjoy doing this :)',
+        'I asked yiannisha for help lmao',
         'Maybe I should study more though 0-0',
         'All right why the heck are you still here?',
         'You wanna leave or something?',
@@ -18,7 +20,7 @@ const Footer = (props) => {
         <footer className={footerStyles.footer}>
             <div
             className={footerStyles.footerContent}
-            onMouseOver={
+            onClick={
                 () => {
                     setText([
                         (text[0] + 1) % words.length,

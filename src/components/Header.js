@@ -10,15 +10,15 @@ const Header = (props) => {
                 <Link
                 to="../../"
                 className={headerStyles.headerBack}>
-                    <h1>⟵</h1>
+                    <div>⟵</div>
                 </Link>}
-                <h1 className={!props.isRocket && headerStyles.headerTitle}>
+                <div className={!props.isRocket && headerStyles.headerTitle}>
                     {props.title}&nbsp;
-                </h1>
+                </div>
                 {props.isRocket && 
-                <h1 className={headerStyles.headerRocket}>
+                <div className={headerStyles.headerRocket}>
                     🚀
-                </h1>}
+                </div>}
             </div>
         </div>
     );

@@ -4,10 +4,12 @@
 }
 
 .article-container {
-    border-radius: 2px;
     width: 100%;
     height: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .article-title {
@@ -21,6 +23,8 @@
 }
 
 .article-image {
-    width: 200px;
+    max-width: 60%;
+    height: 50%;
+    object-fit: scale-down;
     margin-bottom: 30px;
 }
