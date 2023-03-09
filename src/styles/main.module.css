@@ -36,3 +36,20 @@ body {
     min-height: 100vh;
     transition: margin-right .5s;
 }
+
+.about-page-text {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    max-width: 60%;
+}
+
+.about-page-container {
+    width: 100%;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vw;
+    margin-bottom: 1vw;
+}
