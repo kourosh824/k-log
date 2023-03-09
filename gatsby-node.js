@@ -3,7 +3,8 @@ const path = require(`path`);
 
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions;
-    const template = path.resolve(`src/templates/ArticlePage.js`);
+    const articleTemplate = path.resolve(`src/templates/ArticlePage.js`);
+    const authorTemplate = path.resolve(`src/templates/AuthorPage.js`);
 
     return graphql(`
         query {
@@ -21,6 +22,17 @@ exports.createPages = ({ graphql, actions }) => {
                         fullName
                     }
                 }
+            }
+            allContentfulAuthor {
+                nodes {
+                    fullName
+                    image {
+                        gatsbyImageData(width: 500)
+                    }
+                    biography {
+                        raw
+                    }
+                }
               }
         }
     `)
@@ -32,7 +44,17 @@ exports.createPages = ({ graphql, actions }) => {
         result.data.allContentfulArticle.nodes.forEach(node => {
             createPage({
                 path: `/articles/${node.title.toLowerCase().replace(/ /g, '-')}/`,
-                component: template,
+                component: articleTemplate,
+                context: {
+                    ...node
+                },
+            });
+        });
+
+        result.data.allContentfulAuthor.nodes.forEach(node => {
+            createPage({
+                path: `/authors/${node.fullName.toLowerCase().replace(/ /g, '-')}`,
+                component: authorTemplate,
                 context: {
                     ...node
                 },

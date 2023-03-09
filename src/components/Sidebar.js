@@ -14,6 +14,9 @@ const Sidebar = ( {setShowSidebar} ) => {
                 ×
             </div>
             <Link
+            to='../..'
+            className={sidebarStyles.sidebarOption}>Home</Link>
+            <Link
             to='../about'
             className={sidebarStyles.sidebarOption}>About</Link>
             <a

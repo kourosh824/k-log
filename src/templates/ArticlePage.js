@@ -5,10 +5,12 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { GatsbyImage } from 'gatsby-plugin-image';
 import PageHead from "../components/PageHead";
 import Header from '../components/Header';
+import { Link } from "gatsby";
 
 const ArticlePage = (props) => {
     const pic = getImage(props.pageContext.image);
-    
+    const authorLink = `/authors/${props.pageContext.author.fullName.toLowerCase().replace(/[.]/g, '').replace(/ /g, '-')}`;
+
     return (
         <div className={artPageStyles.articlePageContainer}>
             <PageHead pageTitle={ props.pageContext.title } />
@@ -27,9 +29,11 @@ const ArticlePage = (props) => {
                         <p>
                             {props.pageContext.publicationDate.substring(0, 10).replace(/-/g, '/')}
                         </p>
-                        <p>
-                        {props.pageContext.author.fullName.toUpperCase()}
-                        </p>
+                        <Link
+                        to={authorLink}
+                        className={artPageStyles.articlePageAuthorLink}>
+                            {props.pageContext.author.fullName.toUpperCase()}
+                        </Link>
                     </div>
                     <p
                     className={artPageStyles.articlePageText}>

@@ -3,12 +3,12 @@
     to {opacity: 50%;}
 }
 
-.article-page-container {
+.author-page-container {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-color);
 }
 
-.article-page-body {
+.author-page-body {
     margin-top: 10vw;
     width: 100%;
     display: flex;
@@ -16,19 +16,19 @@
     align-items: center;
 }
 
-.article-page-image {
+.author-page-image {
     max-width: 60%;
     height: 50%;
     object-fit: scale-down;
 }
 
-.article-page-image:hover {
+.author-page-image:hover {
     animation-name: image-opacity;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-.article-page-content {
+.author-page-content {
     flex-grow: 3;
     display: flex;
     flex-direction: column;
@@ -37,27 +37,6 @@
     justify-content: space-between;
 }
 
-.article-page-meta {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-.article-page-text {
+.author-page-text {
     text-align: justify;
-}
-
-.article-page-author-link {
-    text-decoration: none;
-}
-
-.article-page-author-link:link,
-.article-page-author-link:visited,
-.article-page-author-link:hover,
-.article-page-author-link:active {
-    color: var(--primary-color);
-    text-decoration: none;
 }
